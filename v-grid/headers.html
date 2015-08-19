@@ -202,9 +202,12 @@
             var slice = data.slice(req.index, req.index + req.count);
             req.success(slice, data.length == 0 ? 1 : data.length);
           };
-          // code
-          grid.header.getCell(1, 0).content = filterElement;
-          // end-code
+
+          grid.then(function(){
+            // code
+            grid.header.getCell(1, 0).content = filterElement;
+            // end-code
+          });
         });
       </code>
     </code-example>
