@@ -418,7 +418,7 @@
           xhr.send();
         }
 
-        window.addEventListener("WebComponentsReady", function() {
+        HTMLImports.whenReady(function() {
           var count = 10;
 
           loadData(1, count);
