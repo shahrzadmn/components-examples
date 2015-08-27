@@ -71,6 +71,60 @@ section {
 button {
   line-height: 1.55;
   margin: 9px;
+  background: rgb(0, 167, 247);
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.75);
+  font-size: 13px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:active {
+  -webkit-box-shadow: 0px 0px 15px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 15px -6px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 15px -6px rgba(0,0,0,0.75);
+}
+
+button.whitebutton {
+  background: #fff;
+  color: rgb(0, 167, 247);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.userdetailswrapper {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.userdetails {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.75);
+}
+
+.userdetails img {
+  margin-right: 10px;
+}
+
+.userdetails small {
+  color: #AAA;
+  font-weight: 100;
+  padding-bottom: 2px;
+}
+
+.userdetails div {
+  text-transform: capitalize;
 }
 
 table-of-contents ol {
