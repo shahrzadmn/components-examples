@@ -37,25 +37,26 @@
 
         <div id="templatewrapper" style="display: none;">
           <template is="dom-bind">
+            <style>.userdata {flex: 1; max-height: 20px;}</style>
             <div class="userdetails" style="display: flex; height: 170px;">
               <img src="{{user.picture.medium}}" style="height: 100px; width: 100px;" />
               <div style="display: flex; flex-direction: column;">
-                <small style="">Name</small>
-                <div style="flex: 1">{{user.name.first}}</div>
+                <small>Name</small>
+                <div class="userdata">{{user.name.first}}</div>
                 <small>Surname</small>
-                <div style="flex: 1">{{user.name.last}}</div>
+                <div class="userdata">{{user.name.last}}</div>
                 <small>Title</small>
-                <div style="flex: 1">Designer</div>
+                <div class="userdata">Designer</div>
                 <small>Hire date</small>
-                <div style="flex: 1">10th August 2015</div>
+                <div class="userdata">10th August 2015</div>
               </div>
               <div style="display: flex; flex-direction: column;">
                 <small>City</small>
-                <div style="flex: 1">{{user.location.city}}</div>
+                <div class="userdata">{{user.location.city}}</div>
                 <small>Street</small>
-                <div style="flex: 1">{{user.location.street}}</div>
+                <div class="userdata">{{user.location.street}}</div>
                 <small>Phone</small>
-                <div style="flex: 1">{{user.phone}}</div>
+                <div class="userdata">{{user.phone}}</div>
                 <div style="display: flex;">
                   <button>MESSAGE</BUTTON>
                   <button class="whitebutton">EDIT</BUTTON>
