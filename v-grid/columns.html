@@ -180,6 +180,53 @@
       </code>
     </code-example>
   </section>
+
+  <section>
+    <h3>Columns hiding</h3>
+    <p>Columns can be hidden or visible.
+      By default all the columns are not able to be hidden by the user. <code>column.hidable</code> property can be used
+      to change that and show the column in the side menu</p>
+    <code-example source>
+      <v-grid demo>
+        <table>
+          <colgroup>
+            <col header-text="Name">
+            <col header-text="Surname" hidable>
+            <col header-text="Activity" hidable hidden>
+            <col header-text="Target" hidden>
+          </colgroup>
+        </table>
+      </v-grid>
+      <code hidden>
+        var employees = [];
+        var names = ["Artur", "Patrik", "Henrik", "Teemu"];
+        var surnames = ["Signell","Lehtinen","Ahlroos","Paul"];
+        var activities = ["Design","Implement","Polish","Deliver"];
+        var targets = ["soup","Vaadin","dog","world peace"];
+        for (var i = 0; i < 400; i++){
+          var row = [];
+          [names, surnames, activities, targets].forEach(function(array){
+            row.push(array[Math.floor(Math.random()*array.length)]);
+          });
+          employees.push(row);
+        }
+      </code>
+      <code demo-var="grid">
+        var grid = grid || document.querySelector("v-grid");
+
+        HTMLImports.whenReady(function() {
+          grid.data.source = employees;
+          // code
+          // Setting the properties with JS api
+          grid.columns[1].hidable = true;
+          grid.columns[2].hidable = true;
+          grid.columns[2].hidden = true;
+          grid.columns[3].hidden = true;
+          // end-code
+        });
+      </code>
+    </code-example>
+  </section>
 </body>
 
 </html>
