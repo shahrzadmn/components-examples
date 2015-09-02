@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>v-grid Code Examples – Formatting data</title>
+  <title>vaadin-grid Code Examples – Formatting data</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../demo.css">
@@ -12,7 +12,7 @@
 
 <body unresolved>
   <section>
-    <h1><a href="./">v-grid</a>
+    <h1><a href="./">vaadin-grid</a>
       <span>Row Details</span>
     </h1>
     <table-of-contents select="h3" class="toc"></table-of-contents>
@@ -20,12 +20,12 @@
 
   <section>
     <h3>Row details</h3>
-    <p>The <code>v-grid</code> can on request show any content below any row,
+    <p>The <code>vaadin-grid</code> can on request show any content below any row,
     e.g. detailed information about the row contents.</p>
     <p>Select a row to open user details.</p>
     <code-example source>
       <div>
-        <v-grid demo hidden>
+        <vaadin-grid demo hidden>
           <table>
             <colgroup>
               <col name="user.name.first" header-text="First Name">
@@ -33,7 +33,7 @@
               <col name="user.email" header-text="Email" flex>
             </colgroup>
           </table>
-        </v-grid>
+        </vaadin-grid>
 
         <div id="templatewrapper" style="display: none;">
           <template is="dom-bind">
@@ -81,7 +81,7 @@
         grid.style.width = grid.clientWidth + "px";
       </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           var dataSourceSize = 1000;
