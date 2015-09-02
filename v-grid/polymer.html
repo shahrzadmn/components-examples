@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>v-grid Code Examples - Polymer Integration</title>
+  <title>vaadin-grid Code Examples - Polymer Integration</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../demo.css">
@@ -12,7 +12,7 @@
 
 <body unresolved>
   <section>
-    <h1><a href="./">v-grid</a>
+    <h1><a href="./">vaadin-grid</a>
       <span>Polymer Integration</span>
     </h1>
     <table-of-contents select="h3" class="toc"></table-of-contents>
@@ -20,12 +20,12 @@
 
   <section>
     <h3 id="headers">Polymer Integration (Light DOM data source)</h3>
-    <p>Static data can be easily bound to v-grid <a href="datasources.html#toc_0_inline_data">light DOM cells</a> with <a href="https://www.polymer-project.org/1.0/docs/devguide/templates.html#dom-repeat">the template repeater</a>.</p>
+    <p>Static data can be easily bound to vaadin-grid <a href="datasources.html#toc_0_inline_data">light DOM cells</a> with <a href="https://www.polymer-project.org/1.0/docs/devguide/templates.html#dom-repeat">the template repeater</a>.</p>
     <code-example source>
       <div demo>
         <dom-module id="my-grid-with-template" demo>
           <template>
-            <v-grid>
+            <vaadin-grid>
               <table>
                 <col header-text="#" width="64">
                 <col width="100">
@@ -46,7 +46,7 @@
                 </template>
                 </tbody>
               </table>
-            </v-grid>
+            </vaadin-grid>
             <template is="dom-if" if="{{selected}}">
               <div class="user-image">
                 <img src="{{selected.user.picture.large}}" />
@@ -63,7 +63,7 @@
             is: 'my-grid-with-template',
             ready: function() {
               var _this = this;
-              var grid = document.querySelector('v-grid');
+              var grid = document.querySelector('vaadin-grid');
 
               grid.addEventListener('select', function() {
                 if(grid.selection.selected().length === 0) {
@@ -101,7 +101,7 @@
       <div demo>
         <dom-module id="my-grid-with-ds" demo>
           <template>
-            <v-grid>
+            <vaadin-grid>
               <table>
                 <colgroup>
                   <col name="user.picture.thumbnail" width="100">
@@ -109,7 +109,7 @@
                   <col header-text="Last Name" name="user.name.last">
                   <col header-text="Email" name="user.email">
                 </colgroup></table>
-            </v-grid>
+            </vaadin-grid>
             <template is="dom-if" if="{{selected}}">
               <div class="user-image">
                 <img src="{{selected.user.picture.large}}">
@@ -126,7 +126,7 @@
             is: 'my-grid-with-ds',
             ready: function() {
               var _this = this;
-              var grid = this.$$('v-grid');
+              var grid = this.$$('vaadin-grid');
 
               grid.addEventListener('select', function() {
                 if(grid.selection.selected().length === 0) {

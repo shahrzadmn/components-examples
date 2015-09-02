@@ -1,4 +1,4 @@
-<v-grid #grid (select)="onSelect()">
+<vaadin-grid #grid (select)="onSelect()">
   <table>
     <colgroup>
       <col width=80 name="user.picture.thumbnail">
@@ -8,7 +8,7 @@
       <col header-text="Email" name="user.email">
     </colgroup>
   </table>
-</v-grid>
+</vaadin-grid>
 
 <img *ng-if="selected" class="user-image" src="{{selected.user.picture.large}}">
 

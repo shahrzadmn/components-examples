@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>v-grid Code Examples – Headers and Footers</title>
+  <title>vaadin-grid Code Examples – Headers and Footers</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../demo.css">
@@ -25,7 +25,7 @@
 
 <body unresolved>
   <section>
-    <h1><a href="./">v-grid</a>
+    <h1><a href="./">vaadin-grid</a>
       <span>Headers and Footers</span>
     </h1>
     <table-of-contents select="h3" class="toc"></table-of-contents>
@@ -39,7 +39,7 @@
     for same functionality. Excluding the <code>default row</code> property headers and
     footers share the same exact API.</p>
     <code-example source>
-      <v-grid demo>
+      <vaadin-grid demo>
         <table>
           <colgroup>
             <col><col><col><col>
@@ -56,7 +56,7 @@
             <tr></tr>
           </tfoot>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
         var employees = [];
         var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -72,7 +72,7 @@
         }
       </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           grid.data.source = employees;
@@ -98,7 +98,7 @@
     with the cell API <code>header.getCell(rowIndex, colIndex).colspan</code>.</p>
 
     <code-example source>
-      <v-grid demo>
+      <vaadin-grid demo>
         <table>
           <colgroup>
             <col><col><col><col>
@@ -112,7 +112,7 @@
             <tr></tr>
           </tfoot>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
          var employees = [];
          var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -128,7 +128,7 @@
          }
        </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           grid.data.source = employees;
@@ -149,7 +149,7 @@
     <p>Typically header/footer cells contain plain text but also HTML or even custom
       elements may be wrapped in the cells.</p>
     <code-example source>
-      <v-grid demo>
+      <vaadin-grid demo>
         <table>
           <colgroup>
             <col><col><col>
@@ -163,7 +163,7 @@
             </tr>
           </thead>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
         var employees = [];
         var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -179,7 +179,7 @@
         }
       </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         var filterElement = document.createElement("input");
         filterElement.setAttribute("type", "search");
@@ -219,7 +219,7 @@
       <code>class</code> attribute in the lightDom API or <code>header.setRowClassName</code>
       and <code>cell.className</code> in the JavaScript API.</p>
     <code-example source>
-      <v-grid demo>
+      <vaadin-grid demo>
         <table>
           <colgroup>
             <col><col>
@@ -230,7 +230,7 @@
             </tr>
           </thead>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
         var employees = [];
         var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -246,7 +246,7 @@
         }
       </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           grid.data.source = employees;
@@ -265,7 +265,7 @@
     <p>Default row in the grid header is the row that contains sort-indicators if sorting
     rules are applied and the "select all" checkbox on multi-select mode.</p>
     <code-example source>
-      <v-grid selection-mode="multi" demo>
+      <vaadin-grid selection-mode="multi" demo>
         <table>
           <colgroup>
             <col sortable sort-direction="asc"><col sortable sort-direction="desc"><col><col>
@@ -279,7 +279,7 @@
             </tr>
           </thead>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
         var employees = [];
         var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -295,7 +295,7 @@
         }
       </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           grid.data.source = employees;
@@ -312,7 +312,7 @@
     <h3>Footer with dynamic text content</h3>
     <p></p>
     <code-example source>
-      <v-grid demo selection-mode="multi">
+      <vaadin-grid demo selection-mode="multi">
         <table>
           <colgroup>
             <col><col><col>
@@ -329,7 +329,7 @@
           </tr>
           </tfoot>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
         var employees = [];
         var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -344,7 +344,7 @@
         }
       </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         function totalScore(employees) {
           var initialValue = employees[0][2];
@@ -372,7 +372,7 @@
     <h3>Pagination</h3>
     <p></p>
     <code-example source>
-      <v-grid demo>
+      <vaadin-grid demo>
         <table>
           <colgroup>
             <col name="index" header-text="#" width="60">
@@ -393,9 +393,9 @@
           </tr>
           </tfoot>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         function loadData(page, count) {
           grid.$$(".spinner-loader").classList.remove('hidden');

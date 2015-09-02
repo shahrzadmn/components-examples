@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>v-grid Code Examples - React Integration</title>
+  <title>vaadin-grid Code Examples - React Integration</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../demo.css">
@@ -17,7 +17,7 @@
 
 <body unresolved>
   <section>
-    <h1><a href="./">v-grid</a>
+    <h1><a href="./">vaadin-grid</a>
       <span>React Integration</span>
     </h1>
     <table-of-contents select="h3" class="toc"></table-of-contents>
@@ -25,10 +25,10 @@
 
   <section>
     <h3>React Integration (function data source)</h3>
-    <p>This example demonstrates using v-grid with React framework.
+    <p>This example demonstrates using vaadin-grid with React framework.
       As React doesn't support custom attributes for elements,
-      v-grid DOM API can't be fully utilized in the initialization.</p>
-    <p>Fortunately v-grid also provides corresponding JavaScript APIs.</p>
+      vaadin-grid DOM API can't be fully utilized in the initialization.</p>
+    <p>Fortunately vaadin-grid also provides corresponding JavaScript APIs.</p>
     <code-example>
       <div demo>
         <div id="reactdemo">
@@ -38,14 +38,14 @@
           var UserGrid = React.createClass({
             render: function(){
               return (
-                <v-grid />
+                <vaadin-grid />
               )
             },
 
             componentDidMount: function() {
               var _this = this;
 
-              // Let the mounted <v-grid> upgrade
+              // Let the mounted <vaadin-grid> upgrade
               Polymer.Async.run(function() {
                 var vGrid = _this.getDOMNode();
 

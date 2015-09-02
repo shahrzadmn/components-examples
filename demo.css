@@ -129,8 +129,3 @@ blockquote {
   padding: 6px 13px;
   border: 1px solid #ddd;
 }
-
-/* This hack avoids a header issue that occurs (only?) in the examples. Needs more investigation. */
-v-grid .v-grid-header {
-  padding-right: 2px;
-}

@@ -5,7 +5,7 @@ import {bootstrap, Component, View, NgIf, NgFor} from 'angular2/angular2';
 })
 @View({
   template: `
-  <v-grid selection-mode='disabled'>
+  <vaadin-grid selection-mode='disabled'>
     <table>
       <colgroup>
         <col width="80">
@@ -20,7 +20,7 @@ import {bootstrap, Component, View, NgIf, NgFor} from 'angular2/angular2';
         </tr>
       </tbody>
     </table>
-  </v-grid>
+  </vaadin-grid>
   `,
   directives: [NgFor, NgIf]
 })

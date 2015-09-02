@@ -11,11 +11,11 @@ import {Http, httpInjectables} from 'angular2/http';
 })
 export class AngularGrid {
   selected: Object;
-  grid = document.querySelector("angular-grid v-grid");
+  grid = document.querySelector("angular-grid vaadin-grid");
   gender = document.querySelector("angular-grid select");
 
   constructor(@Inject(Http) http: Http) {
-    // Set a datasource for the v-grid
+    // Set a datasource for the vaadin-grid
     this.grid.data.source = req =>
       http.get(this.getUrl(this.gender.value, Math.max(req.count, 1)))
         .map(res => res.json().results)

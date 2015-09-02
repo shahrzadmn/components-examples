@@ -14,7 +14,7 @@ var http_1 = require('angular2/http');
 var AngularGrid = (function () {
     function AngularGrid(http) {
         var _this = this;
-        this.grid = document.querySelector("angular-grid v-grid");
+        this.grid = document.querySelector("angular-grid vaadin-grid");
         this.gender = document.querySelector("angular-grid select");
         this.grid.data.source = function (req) {
             return http.get(_this.getUrl(_this.gender.value, Math.max(req.count, 1)))

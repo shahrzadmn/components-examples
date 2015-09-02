@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>v-grid Code Examples. Columns</title>
+  <title>vaadin-grid Code Examples. Columns</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../demo.css">
@@ -13,7 +13,7 @@
 <body unresolved>
 
   <section>
-    <h1><a href="./">v-grid</a>
+    <h1><a href="./">vaadin-grid</a>
       <span>Selection</span>
     </h1>
     <table-of-contents select="h3" class="toc"></table-of-contents>
@@ -25,7 +25,7 @@
       interaction (by clicking, tapping or hitting space on a highlighted cell) or alternatively by using the
       selection JavaScript API.</p>
     <code-example source>
-      <v-grid demo hidden>
+      <vaadin-grid demo hidden>
         <table>
           <colgroup>
             <col header-text="Name">
@@ -45,10 +45,10 @@
             </tr>
           </tbody>
         </table>
-      </v-grid>
+      </vaadin-grid>
 
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           // code
@@ -64,17 +64,17 @@
     <h3>Selection modes</h3>
     <p>
       <ul>
-        <li><b>Single</b> is the default selection mode for <code>v-grid</code>. It allows only one row to be selected at once.</li>
+        <li><b>Single</b> is the default selection mode for <code>vaadin-grid</code>. It allows only one row to be selected at once.</li>
         <li><b>Multi</b> selection mode reveals an additional checkbox column allowing the user to select multiple rows.</li>
         <li><b>All</b> selection mode has each row selected by default allowing the user to deselect individual rows.</li>
         <li><b>Disabled</b> disables the selection functionality.</li>
       </ul>
     </p>
     <p>
-      You can toggle between <b>multi</b> and <b>all</b> modes by clicking the checkbox in <code>v-grid</code> header.
+      You can toggle between <b>multi</b> and <b>all</b> modes by clicking the checkbox in <code>vaadin-grid</code> header.
     </p>
     <code-example source>
-      <v-grid demo selection-mode="multi">
+      <vaadin-grid demo selection-mode="multi">
         <table>
           <colgroup>
             <col header-text="Name">
@@ -82,7 +82,7 @@
             <col header-text="Activity">
           </colgroup>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
         var employees = [];
         var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -98,7 +98,7 @@
         }
       </code>
       <code demo-var="grid" hidden>
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         var controls = document.createElement("div");
         controls.innerHTML = 'Selection mode:';
@@ -124,7 +124,7 @@
         });
       </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           grid.data.source = employees;
@@ -139,12 +139,12 @@
 
   <section>
     <h3>Processing the selections as arrays</h3>
-    <p>You can simply ask <code>v-grid</code> for all the selected row indexes with <code>selection.selected()</code>
+    <p>You can simply ask <code>vaadin-grid</code> for all the selected row indexes with <code>selection.selected()</code>
       function which returns an array of integers for you to process further.</p>
     <p>This works fine on most cases with <i>single</i> and <i>multi</i> selection modes, but if your grid contains tons
       of data and the selection mode is set to <i>all</i>, you're better off with <code>selection.deselected()</code>.</p>
     <code-example source>
-      <v-grid demo selection-mode="multi" hidden>
+      <vaadin-grid demo selection-mode="multi" hidden>
         <table>
           <colgroup>
             <col header-text="Name">
@@ -152,7 +152,7 @@
             <col header-text="Activity">
           </colgroup>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
         var employees = [];
         var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -168,7 +168,7 @@
         }
       </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           grid.data.source = employees;
@@ -192,7 +192,7 @@
     <p>If however your iterator function returns a value, then it's considered a mapper function meaning that
     the selection API function will return an array of pre-mapped values.</p>
     <code-example source>
-      <v-grid demo selection-mode="multi" hidden>
+      <vaadin-grid demo selection-mode="multi" hidden>
         <table>
           <colgroup>
             <col header-text="Name">
@@ -200,7 +200,7 @@
             <col header-text="Activity">
           </colgroup>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
         var employees = [];
         var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -217,7 +217,7 @@
       </code>
 
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           grid.data.source = employees;
@@ -246,7 +246,7 @@
     <p>All the three parameters <i>(iterator/mapper, startIndex, endIndex)</i> have default values so any of
     them can be omitted (or set as undefined).</p>
     <code-example source>
-      <v-grid demo selection-mode="multi" hidden>
+      <vaadin-grid demo selection-mode="multi" hidden>
         <table>
           <colgroup>
             <col header-text="Name">
@@ -254,7 +254,7 @@
             <col header-text="Activity">
           </colgroup>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
         var employees = [];
         var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -270,7 +270,7 @@
         }
       </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           grid.data.source = employees;

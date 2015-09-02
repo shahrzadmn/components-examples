@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>v-grid Code Examples – Sizing and Styling</title>
+  <title>vaadin-grid Code Examples – Sizing and Styling</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../demo.css">
@@ -32,7 +32,7 @@
       font-size: xx-large;
     }
 
-    .chessboard .v-grid-cell {
+    .chessboard .vaadin-grid-cell {
       padding: 0;
     }
   </style>
@@ -40,7 +40,7 @@
 
 <body unresolved>
   <section>
-    <h1><a href="./">v-grid</a>
+    <h1><a href="./">vaadin-grid</a>
       <span>Sizing and Styling</span>
     </h1>
     <table-of-contents select="h3" class="toc"></table-of-contents>
@@ -48,14 +48,14 @@
 
   <section>
     <h3>Sizing the grid</h3>
-    <p>If <code>v-grid</code> is not assigned any bounds externally it will size automatically by itself. By default it
+    <p>If <code>vaadin-grid</code> is not assigned any bounds externally it will size automatically by itself. By default it
     will take 100% of the horizontal space available and its default height depends on the number of
     contained data rows.</p>
-    <p>Standard CSS rules can be used to set a size for the grid or alternatively <code>v-grid</code> can be
+    <p>Standard CSS rules can be used to set a size for the grid or alternatively <code>vaadin-grid</code> can be
     assigned a pre-defined height (in rows) either declaratively in the DOM API or programmatically
     with the JS API</p>
     <code-example source>
-      <v-grid rows=5 demo>
+      <vaadin-grid rows=5 demo>
         <table>
           <colgroup>
             <col header-text="Name">
@@ -63,7 +63,7 @@
             <col header-text="Activity">
           </colgroup>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
         var employees = [];
         var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -79,7 +79,7 @@
         }
       </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           grid.data.source = employees;
@@ -94,9 +94,9 @@
 
   <section>
     <h3>Styling Rows</h3>
-    <p><code>v-grid</code> data rows can be labeled with individual class names by setting a <code>rowClassGenerator</code>.</p>
+    <p><code>vaadin-grid</code> data rows can be labeled with individual class names by setting a <code>rowClassGenerator</code>.</p>
     <code-example source>
-      <v-grid demo hidden>
+      <vaadin-grid demo hidden>
         <table>
           <colgroup>
             <col header-text="Name">
@@ -104,7 +104,7 @@
             <col header-text="Activity">
           </colgroup>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
         var employees = [];
         var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -120,7 +120,7 @@
         }
       </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           grid.data.source = employees;
@@ -139,7 +139,7 @@
     <h3>Styling Cells</h3>
     <p>Single data cells can be styled with the help of a <code>cellClassGenerator</code>.</p>
     <code-example source>
-      <v-grid demo hidden>
+      <vaadin-grid demo hidden>
         <table>
           <colgroup>
             <col header-text="Name">
@@ -147,7 +147,7 @@
             <col header-text="Activity">
           </colgroup>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
         var employees = [];
         var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -163,7 +163,7 @@
         }
       </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           grid.data.source = employees;

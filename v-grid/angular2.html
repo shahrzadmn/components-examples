@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>v-grid Code Examples - Angular 2 Integration</title>
+  <title>vaadin-grid Code Examples - Angular 2 Integration</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../demo.css">
@@ -23,7 +23,7 @@
 
 <body unresolved>
   <section>
-    <h1><a href="./">v-grid</a>
+    <h1><a href="./">vaadin-grid</a>
       <span>Angular 2 Integration</span>
     </h1>
     <table-of-contents select="h3" class="toc"></table-of-contents>
@@ -31,9 +31,9 @@
 
   <section>
     <h3>Angular2 Integration (Light DOM data source)</h3>
-    <p>Static data can be easily bound to v-grid <a href="datasources.html#toc_0_inline_data">light DOM cells</a> with Angular data binding.</p>
+    <p>Static data can be easily bound to vaadin-grid <a href="datasources.html#toc_0_inline_data">light DOM cells</a> with Angular data binding.</p>
     <code-example>
-      <v-grid demo hidden></v-grid>
+      <vaadin-grid demo hidden></vaadin-grid>
       <code demo hidden>
         var ag = document.createElement("angular-grid-dom");
         demo.parentElement.appendChild(ag);
@@ -50,7 +50,7 @@
         })
         @View({
           template: `
-          &lt;v-grid selection-mode='disabled'&gt;
+          &lt;vaadin-grid selection-mode='disabled'&gt;
             &lt;table&gt;
               &lt;colgroup&gt;
                 &lt;col width="80"&gt;
@@ -65,7 +65,7 @@
                 &lt;/tr&gt;
               &lt;/tbody&gt;
             &lt;/table&gt;
-          &lt;/v-grid&gt;
+          &lt;/vaadin-grid&gt;
           `,
           directives: [NgFor, NgIf]
         })
@@ -91,7 +91,7 @@
     Click a row to see an enlarged user image.</p>
     <code-example>
       <div demo>
-        <v-grid #grid (select)="onSelect()">
+        <vaadin-grid #grid (select)="onSelect()">
           <table>
             <colgroup>
               <col header-text="Gender" name="user.gender">
@@ -101,7 +101,7 @@
               <col header-text="Email" name="user.email">
             </colgroup>
           </table>
-        </v-grid>
+        </vaadin-grid>
 
         <img *ng-if="selected" class="user-image" src="{{selected.user.picture.large}}">
 
@@ -135,11 +135,11 @@
         })
         export class AngularGrid {
           selected: Object;
-          grid = document.querySelector("angular-grid v-grid");
+          grid = document.querySelector("angular-grid vaadin-grid");
           gender = document.querySelector("angular-grid select");
 
           constructor(@Inject(Http) http: Http) {
-            // Set a datasource for the v-grid
+            // Set a datasource for the vaadin-grid
             this.grid.data.source = req =>
               http.get(this.getUrl(this.gender.value, Math.max(req.count, 1)))
                 .map(res => res.json().results)

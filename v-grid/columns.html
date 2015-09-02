@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>v-grid Code Examples – Columns</title>
+  <title>vaadin-grid Code Examples – Columns</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../demo.css">
@@ -12,7 +12,7 @@
 
 <body unresolved>
   <section>
-    <h1><a href="./">v-grid</a>
+    <h1><a href="./">vaadin-grid</a>
       <span>Columns</span>
     </h1>
     <table-of-contents select="h3" class="toc"></table-of-contents>
@@ -26,7 +26,7 @@
         contained markup correctly. We also need to provide some data for the
          grid, using <code>tbody</code>, in order to render something.</p>
     <code-example source>
-      <v-grid demo>
+      <vaadin-grid demo>
         <table>
           <colgroup>
             <col header-text="First column">
@@ -39,9 +39,9 @@
             </tr>
           </tbody>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           /*
@@ -64,10 +64,10 @@
        modify the lightDom of the component, but it is not the recommended
        way.</p>
     <code-example source>
-      <v-grid demo hidden></v-grid>
+      <vaadin-grid demo hidden></vaadin-grid>
 
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           grid.data.source = [["One", "Two"]];
@@ -88,7 +88,7 @@
     in width in relation to other columns.</p>
     <p>Columns may also be assigend an explicit width, a maximum width and a minimum width.</p>
     <code-example source>
-      <v-grid demo>
+      <vaadin-grid demo>
         <table>
           <colgroup>
             <col header-text="Name" width=100 flex=1>
@@ -96,7 +96,7 @@
             <col header-text="Activity" min-width=100 flex=1>
           </colgroup>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
         var employees = [];
         var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -112,7 +112,7 @@
         }
       </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           grid.data.source = employees;
@@ -138,7 +138,7 @@
     containing the checkboxes is frozen by default but setting <code>grid.frozenColumns</code> to
     -1 will unfreeze it as well.</p>
     <code-example source>
-      <v-grid selection-mode="multi" frozen-columns="1" demo>
+      <vaadin-grid selection-mode="multi" frozen-columns="1" demo>
         <table>
           <colgroup>
             <col header-text="Name">
@@ -148,7 +148,7 @@
             <col header-text="Progress">
           </colgroup>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
         var employees = [];
         var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -164,7 +164,7 @@
         }
       </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           grid.data.source = employees;
