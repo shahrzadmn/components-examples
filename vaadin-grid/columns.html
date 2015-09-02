@@ -187,7 +187,7 @@
       By default all the columns are not able to be hidden by the user. <code>column.hidable</code> property can be used
       to change that and show the column in the side menu</p>
     <code-example source>
-      <v-grid demo>
+      <vaadin-grid demo>
         <table>
           <colgroup>
             <col header-text="Name">
@@ -196,7 +196,7 @@
             <col header-text="Target" hidden>
           </colgroup>
         </table>
-      </v-grid>
+      </vaadin-grid>
       <code hidden>
         var employees = [];
         var names = ["Artur", "Patrik", "Henrik", "Teemu"];
@@ -212,7 +212,7 @@
         }
       </code>
       <code demo-var="grid">
-        var grid = grid || document.querySelector("v-grid");
+        var grid = grid || document.querySelector("vaadin-grid");
 
         HTMLImports.whenReady(function() {
           grid.data.source = employees;
