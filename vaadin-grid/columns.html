@@ -184,8 +184,9 @@
   <section>
     <h3>Column hiding</h3>
     <p>Columns can be hidden or visible.
-      By default all the columns are not able to be hidden by the user. <code>column.hidable</code> property can be used
-      to change that and show the column in the side menu</p>
+      By default none of the columns are user-hidable. Setting a column's <code>hidable</code> property
+      true appends it to the dropdown menu on the right where individual columns can be toggled
+      hidden/visible by the user.</p>
     <code-example source>
       <vaadin-grid demo>
         <table>
