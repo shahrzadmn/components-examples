@@ -68,7 +68,7 @@ section {
   margin-bottom: 1.5em;
 }
 
-button {
+.demo-button {
   line-height: 1.55;
   margin: 9px;
   background: rgb(0, 167, 247);
@@ -84,13 +84,13 @@ button {
   cursor: pointer;
 }
 
-button:active {
+.demo-button:active {
   -webkit-box-shadow: 0px 0px 15px -6px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 15px -6px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 15px -6px rgba(0,0,0,0.75);
 }
 
-button.whitebutton {
+.demo-button.whitebutton {
   background: #fff;
   color: rgb(0, 167, 247);
   -webkit-box-shadow: none;
