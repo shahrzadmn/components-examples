@@ -1,6 +1,6 @@
 {
   "name": "vaadin-components",
-  "version": "0.3.0-beta6",
+  "version": "0.3.0-beta7",
   "authors": [
     "Vaadin Ltd"
   ],
@@ -18,6 +18,6 @@
     "**/tests"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#v1.0.9"
+    "polymer": "Polymer/polymer#v1.1.1"
   }
 }
