@@ -15,8 +15,7 @@
   ],
   "dependencies": {
     "vaadin-components": "vaadin-components#0.3.0-beta7",
-    "code-example": "~0.0.13",
-    "table-of-contents": "~0.0.2",
-    "marked": "~0.3.3"
+    "marked": "~0.3.3",
+    "components-demo-resources": "vaadin/components-demo-resources#master"
   }
 }
