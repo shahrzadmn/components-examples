@@ -25,7 +25,7 @@
   <script>
     var xmlhttp;
     xmlhttp=new XMLHttpRequest();
-    xmlhttp.open("GET", "https://api.github.com/repos/vaadin/components/contents/vaadin-components-package/README.md?ref=master", false);
+    xmlhttp.open("GET", "https://api.github.com/repos/vaadin-bower/vaadin-components/contents/README.md?ref=master", false);
     xmlhttp.send();
     var readme = document.getElementById("readme");
     var obj = JSON.parse(xmlhttp.responseText);
