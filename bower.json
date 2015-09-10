@@ -1,6 +1,6 @@
 {
   "name": "vaadin-components-examples",
-  "version": "0.3.0-beta7",
+  "version": "0.3.0-beta8",
   "authors": [
     "Vaadin Ltd"
   ],
@@ -14,7 +14,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "vaadin-components": "vaadin-components#0.3.0-beta7",
+    "vaadin-components": "vaadin-components#0.3.0-beta8",
     "marked": "~0.3.3",
     "components-demo-resources": "vaadin/components-demo-resources#master"
   }
