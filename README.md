@@ -4,7 +4,7 @@ A set of high-quality Web Components built using Polymer.
 
 Learn more about [Vaadin Components.](https://vaadin.com/components/)
 
-View the [live site](http://vaadin.github.io/vaadin-components-examples/) to see the code examples side-by-side with its corresponding live example.
+View the [live site](http://vaadin.github.io/components-examples/) to see the code examples side-by-side with its corresponding live example.
 
 
 ### Setting up the project for the first time
@@ -15,13 +15,13 @@ Skip this step if you already have this stuff locally.
 ```shell
 $ git clone https://github.com/vaadin/components-examples.git
 ```
-- Or [download ZIP archive](https://github.com/vaadin/vaadin-components-examples/archive/gh-pages.zip) and unzip it
+- Or [download ZIP archive](https://github.com/vaadin/components-examples/archive/gh-pages.zip) and unzip it
 
 ### Serving the examples
 
 - Go to the examples directory
 ```shell
-$ cd vaadin-components-examples
+$ cd components-examples
 ```
 - Spin up a web server, for example [serve](https://www.npmjs.com/package/serve).
 ```shell
