@@ -21,7 +21,7 @@ $ git clone https://github.com/vaadin/components-examples.git
 
 - Go to the examples directory
 ```shell
-$ cd components-examples
+$ cd vaadin-components-examples
 ```
 - Spin up a web server, for example [serve](https://www.npmjs.com/package/serve).
 ```shell
