@@ -2,7 +2,7 @@
 
 A set of high-quality Web Components built using Polymer.
 
-Learn more about [Vaadin Components.](https://vaadin.com/vaadin-components/)
+Learn more about [Vaadin Components.](https://vaadin.com/components/)
 
 View the [live site](http://vaadin.github.io/vaadin-components-examples/) to see the code examples side-by-side with its corresponding live example.
 
