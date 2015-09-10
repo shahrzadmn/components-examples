@@ -2,9 +2,9 @@
 
 A set of high-quality Web Components built using Polymer.
 
-Learn more about [Vaadin Components.](https://vaadin.com/components/)
+Learn more about [Vaadin Components.](https://vaadin.com/vaadin-components/)
 
-View the [live site](http://vaadin.github.io/components-examples/) to see the code examples side-by-side with its corresponding live example.
+View the [live site](http://vaadin.github.io/vaadin-components-examples/) to see the code examples side-by-side with its corresponding live example.
 
 
 ### Setting up the project for the first time
@@ -15,7 +15,7 @@ Skip this step if you already have this stuff locally.
 ```shell
 $ git clone https://github.com/vaadin/components-examples.git
 ```
-- Or [download ZIP archive](https://github.com/vaadin/components-examples/archive/gh-pages.zip) and unzip it
+- Or [download ZIP archive](https://github.com/vaadin/vaadin-components-examples/archive/gh-pages.zip) and unzip it
 
 ### Serving the examples
 
