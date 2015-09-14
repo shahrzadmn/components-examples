@@ -1,4 +1,7 @@
+### NOTE: This project has been deprecated. Now examples are bundled with the vaadin-components component.
+
 # Vaadin Components Examples
+
 
 A set of high-quality Web Components built using Polymer.
 
