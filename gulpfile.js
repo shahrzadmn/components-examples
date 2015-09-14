@@ -8,6 +8,7 @@ gulp.task('default', ['copy']);
 gulp.task('copy', function() {
   gulp.src("bower_components/vaadin-*/demo/**")
   .pipe(flatten({ includeParents: 1} ))
+  .pipe(replace(/\.\.\/\.\.\//mg, '../bower_components/'))
   .pipe(replace(/\.\.\/vaadin-(.*?)\.html/, '../bower_components/vaadin-$1/vaadin-$1.html'))
   .pipe(gulp.dest('.'));
 });
